@@ -5,4 +5,4 @@ all:
 	cat log.txt
 
 clean:
-	rm out
+	rm out log.txt
