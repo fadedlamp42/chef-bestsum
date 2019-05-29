@@ -15,12 +15,13 @@ int main(int argc, char**argv){
     int N, K, P;
     std::vector<int> V;
 
-    //N = amount of numbers, K = modulo, P = minimum result
+    //N = amount of numbers, K = minimum result, P = modulo 
     std::cin >> N >> K >> P;
     log << "N: " << N << std::endl;
     log << "K: " << K << std::endl;
     log << "P: " << P << std::endl;
 
+    //input
     log << "Reading " << N << " numbers: ";
     for(int x=0; x<N; ++x){
         int temp;
@@ -29,6 +30,9 @@ int main(int argc, char**argv){
         log << temp << " ";
     }
     log << std::endl;
+
+    //function call and print result
+    std::cout << best_mod(V, P, K) << std::endl;
         
     log << "---------END\n"; //logging and debug
     log.close();
