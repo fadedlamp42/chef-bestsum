@@ -3,12 +3,14 @@
 #include <fstream> //logging and debugging
 #include <vector> //std::vector
 
-int partial_sum(std::vector<int>, int i, int j);
+//global log file, bad practice but easiest way to log within functions
+std::ofstream log;
+
+int partial_sum(std::vector<int> v, int i, int j);
 int best_mod(std::vector<int>, int mod, int min);
 
 int main(int argc, char**argv){
     //logging and debug
-    std::ofstream log;
     log.open("log.txt");
     log << "---------START\n";
 
@@ -39,12 +41,23 @@ int main(int argc, char**argv){
     return 0;
 }
 
-int partial_sum(std::vector<int>, int i, int j){
+int partial_sum(std::vector<int> v, unsigned int i, unsigned int j){
+    //i must be less than j, i and j must be between 0 and v.size()
+    if(i>j || j>=v.size() || i < 0){
+        log << "partial_sum validation failed\n";
+        return 0;
+    }
+
+    int sum=0;
+    for(unsigned int x=i; x<j; ++x)
+        sum += v[x];
+
     return 0;
 }
 int best_mod(std::vector<int>, int mod, int min){
     //main loop
     for(int dist=0; dist<mod; ++dist){//dist = distance from minimum, start at 0, end at mod-1
+
 
     }
 
