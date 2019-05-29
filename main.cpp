@@ -43,5 +43,10 @@ int partial_sum(std::vector<int>, int i, int j){
     return 0;
 }
 int best_mod(std::vector<int>, int mod, int min){
+    //main loop
+    for(int dist=0; dist<mod; ++dist){//dist = distance from minimum, start at 0, end at mod-1
+
+    }
+
     return 0;
 }
